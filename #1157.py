@@ -1,5 +1,5 @@
-# alpha = input()
-# alpha = alpha.upper()
+alpha = input()
+alpha = alpha.upper()
 alpha = list(alpha)
 
 count={}
@@ -39,3 +39,29 @@ else:
 #     print(cnt_list)
 #     print(max_index)
 #     print(unique_words[max_index])
+
+# 용재 코드
+# n = input()
+# a = list(n.upper())
+# l = set(a)
+
+# maxNum = 0
+# q = False
+# g = ''
+
+# for i in l:
+#     c = a.count(i)
+    
+#     if c > maxNum:
+#         g = i
+#         maxNum = c
+
+#     elif c == maxNum:
+#         q = True
+
+
+# if q == True:
+#     print('?')
+
+# else:
+#     print(g)
