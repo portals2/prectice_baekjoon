@@ -14,8 +14,8 @@ for i in count:
 
 if len(result) >= 2:
     print('?')
-else:
-    print(max(count,key=count.get))
+# else:
+#     print(max(count,key=count.get))
 
 # print(list(count.values()).count(2))
 
