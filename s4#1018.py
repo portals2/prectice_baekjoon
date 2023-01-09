@@ -52,8 +52,8 @@
 #         count.append(int(list(s1).count(False)))
 #         count.append(int(list(s2).count(False)))
 #     print(min(count))
-#######################################
-# 리스트로 해결
+    #######################
+    # 리스트로 해결
 c1 = [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'],
     ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'],
     ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'],
