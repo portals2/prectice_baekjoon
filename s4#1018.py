@@ -1,3 +1,4 @@
+# 넘파이로 해결 (백준은 넘파이 지원 안함)
 # import numpy as np
 
 # by = list(map(int, input().split(' ')))
@@ -52,6 +53,7 @@
 #         count.append(int(list(s2).count(False)))
 #     print(min(count))
     #######################
+    # 리스트로 해결
 c1 = [['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'],
     ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'],
     ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'],
@@ -69,6 +71,7 @@ c2 = [['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'],
     ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'],
     ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'],
     ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W']]
+
 
 n, m = list(map(int, input().split(' ')))
 bord = []
@@ -100,3 +103,37 @@ for i in range(len(c_bord)):
     coun = 0
 
 print(min(k))
+#######################################
+#축약 및 sys
+# import sys
+
+# a, b = map(int, input().split())
+
+# board = []
+# result = []
+# for i in range(a):
+#     board.append(input())
+
+# for n in range(a-7):
+#     for m in range(b-7):
+#         white=0
+#         black=0
+#         for x in range(n, n+8):
+#             for y in range(m, m+8):
+#                 if((x+y)%2==0):
+#                     if board[x][y]!= 'W': 
+#                         white+=1         
+#                     else:
+#                         black+=1
+
+#                 else:
+#                     if board[x][y]!= 'W':
+#                         black+=1
+#                     else:
+#                         white+=1
+
+#         result.append(white)
+#         result.append(black)
+
+# print(min(result))
+
