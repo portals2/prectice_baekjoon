@@ -44,29 +44,28 @@
 #     print(i)
 
 ################ 딕셔너리
-# import sys
-# n = int(input())
+import sys
+n = int(input())
 
-# count={}
-# for i in range(n):
-#     a = int(sys.stdin.readline())
-#     if a not in count:
-#         count[int(a)]=1
-#     else:
-#         count[a] += 1
+count={}
+for i in range(n):
+    a = int(sys.stdin.readline())
+    if a not in count:
+        count[int(a)]=1
+    else:
+        count[a] += 1
 
-# for i in sorted(count):
-#     for j in range(count[i]):
-#         print(i)
+for i in sorted(count):
+    for j in range(count[i]):
+        print(i)
 
 #### 리스트
-import sys
-n=int(input())
-num=[0]*10001
-print(num)
-for _ in range(n):
-    num[int(sys.stdin.readline())]+=1
-for i in range(1, 10001):
-    while num[i]>0:
-        print(i)
-        num[i]-=1
+# import sys
+# n=int(input())
+# num=[0]*10001
+# for _ in range(n):
+#     num[int(sys.stdin.readline())]+=1
+# for i in range(1, 10001):
+#     while num[i]>0:
+#         print(i)
+#         num[i]-=1
