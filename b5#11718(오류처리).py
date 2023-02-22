@@ -1,4 +1,7 @@
 i = 0
 while i <= 100:
-    print(input())
+    try:
+        print(input())
+    except EOFError:
+        break
     i += 1
