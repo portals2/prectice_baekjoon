@@ -38,4 +38,12 @@ print(len(a))
 # for i in a:
 #     if (i == '=') or (i == '-'):
 
+# # 완벽한 모범 답안
+# # str을 분리하지 않고 해당 글자를 비교해서 하나씩 빼주었다.
+# n = input()
+# cro = ['c=', 'c-', 'dz=', 'd-', 'lj', 'nj','s=', 'z=']
+# count = len(n)
+# for x in cro:
+#     count -= n.count(x)
+# print(count)
 
