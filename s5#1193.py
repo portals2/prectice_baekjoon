@@ -33,3 +33,19 @@ else:
     print(arr[-1])
 
 #짝수는 False 홀수는 True
+
+# #모범답안
+# x=int(input())
+# line = 1
+# count = 1
+# while x > count:
+#     if x > count:
+#         line += 1
+#         count = count+line
+
+# a,b = count-x+1, line-(count-x)
+
+# if line%2==0:
+#     print(f'{b}/{a}')
+# else:
+#     print(f'{a}/{b}')
