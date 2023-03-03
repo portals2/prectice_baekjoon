@@ -18,7 +18,5 @@ s = int(input())
 while k <= s:
     i += 1
     k += i
-# if (s==1) or (s==2):
-#     print(i)
-else:
-    print(i-1)
+
+print(i-1)
