@@ -6,7 +6,7 @@ arr= [i for i in range(1, N+1)]
 j= 0
 
 for _ in range(N):
-    j+= K-1 #j=0으로 시작하고 for문 앞에서 +=시켜주는 경우 맞음
+    j+= K-1
     if j >= len(arr):
         j= j%(len(arr)) 
     answer.append(arr.pop(j))
