@@ -18,5 +18,19 @@ for p in perm:
 	elif c == 0:
 		print(-1)
 		break
-	
-print(8+0+8+7+5+5+4+2)
+
+# # 다른 방법
+# # 30의 배수는 모든 자리의 수의 합 % 3 이 0이다.
+# print(8+0+8+7+5+5+4+2) # 39%3 =0 0
+# T = list(input())
+# T.sort()
+
+# hap = 0
+# for i in T:
+#     hap += int(i)
+
+# T.reverse()
+# if int(''.join(T)) % 30:
+#     print(-1)
+# else:
+#     print(''.join(T))
