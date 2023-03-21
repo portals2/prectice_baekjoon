@@ -16,9 +16,3 @@ for i in range(2,n+1):
             if len(l) == k:
                print(j)
 
-# for i in p:
-#     if i in primes:
-#         con +=1
-    
-# print(con)
-
