@@ -9,5 +9,5 @@ for i in range(n):
     www[w] = p
 
 for i in range(m):
-    ww = input().rstrip()
+    ww = input()  #.rstrip()
     print(www[ww])
