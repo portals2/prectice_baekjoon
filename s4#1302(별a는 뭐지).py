@@ -14,3 +14,7 @@ for key, v in aa:
     if v == max(a.values()):
         l.append(key)
 print(sorted(l)[0])
+
+#### 신기한 답안
+n,*a=open(0)
+print(max(sorted(a),key=a.count))
