@@ -24,20 +24,18 @@
 
 
 #### 모법답안
-N, M=map(int, input().split())
-a=[list(map(int, input().split())) for _ in range(N)]
+N, M = map(int, input().split())
+A = [[*map(int, input().split())] for _ in range(N)]
+M, K = map(int, input().split())
+B = [[*map(int, input().split())] for _ in range(M)]
 
-M, K=map(int, input().split())
-b=[list(map(int, input().split())) for _ in range(M)]
-
-asdf=[[0 for _ in range(K)] for _ in range(N)]
+C = [[0] * K for _ in range(N)]
 for i in range(N):
     for j in range(K):
-        for l in range(M):
-            asdf[i][j]+=a[i][l]*b[l][j]
-            # a(3,2) b(2,3)일 때 a와b의 i,j가 바뀌면서 l이 한번씩
+        for k in range(M):
+            C[i][j] += A[i][k] * B[k][j]
+            # a(3,2) b(2,3)일 때 a와b의 i,j가 한번 씩 바뀌면서 k가 한번씩
             # 모든 요소를 돌아가기 때문에
-for r in asdf:
-    for n in r:
-        print(n, end=' ')
-    print()
+            # 결국 행렬의 곱셈에 대해서 알아야 한다.
+for c in C:
+    print(*c)
