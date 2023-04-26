@@ -11,3 +11,12 @@ while True:
         for i in range(0, len(aa)):
             print(aa[i], end=' ')
         print('')
+
+#### 모범답안
+while True:
+    word = input()
+    if word == "END":
+        break
+    else:
+        word = word[::-1]
+        print(word)
