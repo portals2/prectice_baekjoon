@@ -1,1 +1,1 @@
-print(mid(10, 20))
+print(72%2)
