@@ -12,7 +12,7 @@ for i in range(2,n):
 
 l=[]
 def tow(u):
-    for i in range(len(primes)+1):
+    for i in range(len(primes)):
         if u == 1:
             return 
         elif u % primes[i] == 0:
@@ -23,16 +23,27 @@ tow(n)
 
 [print(i)for i in sorted(l)]
 
-# #### 모범답안
-# N=int(input())
-# def devide(N):
-#     for i in range(2,N+1):
-#         if N%i==0:
-#             print(i)
-#             N//=i
-#             if N==1:
-#                 break
-#             else:
-#                 devide(N)
-#                 break
-# devide(N)
+#### 모범답안
+N=int(input())
+def devide(N):
+    for i in range(2,N+1):
+        if N%i==0:
+            print(i)
+            N//=i
+            if N==1:
+                break
+            else:
+                devide(N)
+                break
+devide(N)
+
+
+#### 
+N = int(input())
+i = 2
+while N>1:
+    if N%i==0:
+        N /= i
+        print(i)
+    else:
+        i+=1
