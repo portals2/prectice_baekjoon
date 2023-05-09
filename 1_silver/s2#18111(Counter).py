@@ -4,6 +4,7 @@
 
 평균과 각 숫자의 차의 전체합이 0이면 평균
 '''
+'''
 import sys
 input = sys.stdin.readline
 
@@ -42,7 +43,7 @@ else:
         print(i, end=' ')
 
 
-#### 파이썬으로 해결한 코드Counter
+#### 파이썬으로 해결한 (used 코드Counter)
 from collections import Counter
 from sys import stdin
 input = stdin.readline
@@ -66,34 +67,37 @@ for h in range(min(land),max(land)+1):
             ans[0] = sec
             ans[1] = h
 print(*ans)
-
+'''
 
 #### 파이썬 해결 코드
 I=lambda:map(int,input().split())
 n,m,b=I()
 l=[]
+
 for i in range(n):l.extend(I())
 dic={}
+#각 칸의 높이를 key로 얼마나있는지 velue로 나타냄
 for i in l:
     if i not in dic:
-        dic[i]=1
+        dic[i]=1 
     else:
         dic[i]+=1
 rt=8**9
 rh=0
-for i in range(min(l),max(l)+1):
-    t=0
-    tb=b
+
+for i in range(min(l),max(l)+1): #낮은 곳부터 높은 곳으로
+    t=0 #시간
+    tb=b # 가진 블록
     for j in dic:
         q=dic.get(j)
-        if j>i:
-            t+=(j-i)*q*2
-            tb+=(j-i)*q
+        if j>i: #i=0 i보다 높은지 확인
+            t+=(j-i)*q*2 # i층을 뺸 j층을 부시는 시간
+            tb+=(j-i)*q # 부신 블럭을 채우기
         else:
-            t+=(i-j)*q
-            tb-=(i-j)*q
-    if tb>=0:
-        if t<=rt:
+            t+=(i-j)*q # j가 i층 보다 낮다면 블럭 놓기 시간
+            tb-=(i-j)*q #아이템이 빠져나간다.
+    if tb>=0: # 가진 블록이 있다. >> 아직 더 쌓을 수 있다.
+        if t<=rt: # rt를 검사해서 최소 시간을 확정한다. 만약 같다면, 더 높은 층과 시간을 알 수 있다.
             rt=t
             rh=i
 print(rt,rh)

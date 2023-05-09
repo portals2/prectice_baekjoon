@@ -32,41 +32,44 @@ dfs(r)
 for i in range(1, n + 1):
     print(c[i])
 
-
-# for i in dfs_l:
-#     c[i-1] = c_
-#     c_ += 1
-# for i in c:
-#     print(i)
-
 '''
-6 4 1
-2 3
-1 4
-1 5
-4 6
-'''
+#### 모범답안
+import sys
+sys.setrecursionlimit(10**6)
+input = sys.stdin.readline
 
-         
-            
+N, M, R = map(int, input().split())
+
+# index 1부터 요소를 저장하기 때문에 n+1을 한다.
+data = [[] for _ in range(N + 1)]
+# visited 저장을 1부터 하기 때문에 n+1을 한다.
+visited = [0] * (N + 1) 
+# fleg라고 해도 무관 // vitied을 판단하기 위해
+count = 1
+
+for _ in range(M):
+    u, v = map(int, input().split())
+    # 무방향성이기 때문에 어디서든 접근이 가능해야한다.
+    data[u].append(v)
+    data[v].append(u)
+
+# 오름차순 정렬이기 때문에 각 요소를 정렬한다.
+for i in data:
+    i.sort()
+
+
+def dfs(r):
+    global count
+    # r index를 0에서 1로 visited 했다는 것을 표시
+    visited[r] = count
     
+    for i in data[r]:
+        if visited[i] == 0:
+            count += 1
+            dfs(i)
 
 
-# 6 4 1
-
-# 2 3
-
-# 1 4
-
-# 1 5
-
-# 4 6
-
-# 정답 1 4 6 5
-
-# 1 일에 처음 방문
-# 0 이에 방문 x
-# 0 삼에 방문 x
-# 2 4에 두번쨰 방문
-# 4 5에 4번째 
-# 3 6에 3번째
+dfs(R)
+for i in range(1, N + 1):
+    print(visited[i])
+'''
