@@ -29,4 +29,3 @@ for _ in range(T):
         if x%i==0 and y%i==0:
             k = i
     print(x*y//k)
-###
