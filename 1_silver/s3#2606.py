@@ -26,7 +26,10 @@ for i in range(m):
 l = []
 jg(a[1])
 
-print(len(set(l))-1)
+if len(set(l)) == 0:
+    print(0)
+else:
+    print(len(set(l))-1)
 
 
 ####리스트로 푼 문제
