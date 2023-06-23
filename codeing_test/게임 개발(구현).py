@@ -13,32 +13,53 @@ y = p[1]
 look = p[2]
 
 a = []
+p = [[0] * m for _ in range(n)]
 
 for i in range(n):
     a.append(list(map(int, input().split())))
 
-# 북쪽이라는 소리는 현재 위치에서 y-1
-# 동쪽은 x + 1
-# 남쪽은 y + 1
-# 서쪽은 x - 1
-result = 0
-c = 0
+# 행렬의 좌표는 유클리드와 다르다. (ex 3x5)
+# (0,0) (0,1) (0,2) (0,3) (0,4)
+# (1,0) (1,1) (1,2) (1,3) (1,4)
+# (2,0) (2,1) (2,2) (2,3) (2,4)
+
+# 북, 동, 남, 서
+n = [(-1,0),(0,1),(1,0),(0,-1)]
+
+def turn_left():
+    global look
+    look -= 1
+    if look == -1:
+        look = 3
+
+c = 1
+t_t = 0
+p[x][y] = 1
+
 while True:
-    if c == 4:
-    
-    if look == 0:
-        if a[x][y-1] == 0:
-            look += 1
-            c += 1
-    elif look == 1:
-        if a[x+1][y] == 0:
-            look += 1
-            c += 1
-    elif look == 2:
-        if a[x][y+1] == 0:
-            look += 1
-            c += 1
-    elif look == 3:
-        if a[x-1][y] == 0:
-            look = 0
-            c += 1
+    turn_left()
+    nx = x + n[look][0]
+    ny = y + n[look][1]
+
+    if a[nx][ny] == 0 and p[nx][ny] == 0:
+        x = nx
+        y = ny
+        p[x][y] = 1
+        c += 1
+        t_t =0
+        continue
+    else:
+        t_t += 1
+        
+
+    if t_t == 4:
+        nx = x - n[look][0]
+        ny = y - n[look][1]
+        if a[nx][ny] == 0:
+            x = nx
+            y = ny
+        else:
+            break
+        t_t = 0
+
+print(c)
