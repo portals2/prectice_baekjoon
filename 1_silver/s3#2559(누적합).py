@@ -5,7 +5,7 @@ a = list(map(int, input().split()))
 t = [0 for _ in range(n)]
 sum = 0
 sum_l = [0]
-max_hi = 0
+max_hi = -1e9
 
 for i in a:
     sum += i
