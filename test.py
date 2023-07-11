@@ -1,3 +1,3 @@
-a = 'abc'
-a = list(a)
-print(a[3:0])
+b = ['b','a',"c"]
+
+print(''.join(b))

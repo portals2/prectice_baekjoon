@@ -27,5 +27,4 @@ while s < e:
         s += 1
         e -= 1
         
-
 print(c)
