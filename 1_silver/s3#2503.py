@@ -67,7 +67,7 @@ for i in itertools.permutations(num, 3):
     for j in game:
         strike, ball = check(i, j[0])
         #print(i, j, check(i, j[0]))
-        if strike != j[1] or ball != j[2]:
+        if strike != j[1] or ball != j[2]: #j[1]은 strike [0]은 ball
             flag = False
             break
     if flag:
